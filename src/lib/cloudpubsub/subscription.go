@@ -11,5 +11,5 @@ type MessageHandler func(context.Context, *pubsub.Message)
 
 // Subscription ... subscription interface
 type Subscription interface {
-	Listen() error
+	Listen(*MessageHandler) error
 }
