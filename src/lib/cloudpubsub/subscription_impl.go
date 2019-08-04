@@ -11,7 +11,16 @@ type ps struct {
 	subscription *pubsub.Subscription
 }
 
-func (p *ps) Listen(*MessageHandler) error {
+func (p *ps) Listen(handle MessageHandler) error {
+
+	ctx := context.Background()
+
+	err := p.subscription.Receive(ctx, handle)
+
+	if err != nil {
+		return err
+	}
+
 	return nil
 }
 
