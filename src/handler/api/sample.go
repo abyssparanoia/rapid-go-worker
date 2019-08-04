@@ -3,8 +3,8 @@ package api
 import (
 	"net/http"
 
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/renderer"
-	"github.com/abyssparanoia/rapid-go-woker/src/service"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/renderer"
+	"github.com/abyssparanoia/rapid-go-worker/src/service"
 )
 
 // SampleHandler ... サンプルのハンドラ

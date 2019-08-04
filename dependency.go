@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/abyssparanoia/rapid-go-woker/src/handler/api"
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/cloudfirestore"
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/deploy"
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/firebaseauth"
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/jsonrpc2"
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/log"
-	"github.com/abyssparanoia/rapid-go-woker/src/repository"
-	"github.com/abyssparanoia/rapid-go-woker/src/service"
+	"github.com/abyssparanoia/rapid-go-worker/src/handler/api"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/cloudfirestore"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/deploy"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/firebaseauth"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/jsonrpc2"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/log"
+	"github.com/abyssparanoia/rapid-go-worker/src/repository"
+	"github.com/abyssparanoia/rapid-go-worker/src/service"
 )
 
 // Dependency ... 依存性

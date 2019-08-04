@@ -1,6 +1,6 @@
 FROM golang:1.12-alpine
 
-WORKDIR /go/src/github.com/abyssparanoia/rapid-go-woker/
+WORKDIR /go/src/github.com/abyssparanoia/rapid-go-worker/
 COPY . .
 
 ENV GO111MODULE=on

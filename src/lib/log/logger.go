@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/errcode"
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/util"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/errcode"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/util"
 )
 
 // Logger ... ロガー

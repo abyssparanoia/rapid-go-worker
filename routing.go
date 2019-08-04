@@ -5,9 +5,9 @@ import (
 
 	"github.com/go-chi/chi"
 
-	"github.com/abyssparanoia/rapid-go-woker/src/handler"
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/accesscontrol"
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/deploy"
+	"github.com/abyssparanoia/rapid-go-worker/src/handler"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/accesscontrol"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/deploy"
 )
 
 // Routing ... ルーティング設定

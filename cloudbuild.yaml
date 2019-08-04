@@ -13,7 +13,7 @@ steps:
       [
         "build",
         "-t",
-        "asia.gcr.io/$PROJECT_ID/rapid-go-woker:$SHORT_SHA",
+        "asia.gcr.io/$PROJECT_ID/rapid-go-worker:$SHORT_SHA",
         "-f",
         "./Prd.Dockerfile",
         ".",
@@ -21,7 +21,7 @@ steps:
 
   - id: Push docker image to GCR
     name: gcr.io/cloud-builders/docker
-    args: ["push", "asia.gcr.io/$PROJECT_ID/rapid-go-woker:$SHORT_SHA"]
+    args: ["push", "asia.gcr.io/$PROJECT_ID/rapid-go-worker:$SHORT_SHA"]
 
   - id: Deploy Cloud Run
     name: gcr.io/cloud-builders/gcloud
@@ -34,7 +34,7 @@ steps:
         "--project",
         "${PROJECT_ID}",
         "--image",
-        "asia.gcr.io/$PROJECT_ID/rapid-go-woker:$SHORT_SHA",
+        "asia.gcr.io/$PROJECT_ID/rapid-go-worker:$SHORT_SHA",
         "--platform",
         "managed",
         "--region",

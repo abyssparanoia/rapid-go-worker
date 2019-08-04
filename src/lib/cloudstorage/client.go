@@ -11,8 +11,8 @@ import (
 	"github.com/vincent-petithory/dataurl"
 	"google.golang.org/api/option"
 
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/errcode"
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/log"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/errcode"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/log"
 )
 
 // Client ... GCSのクライアント

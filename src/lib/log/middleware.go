@@ -3,7 +3,7 @@ package log
 import (
 	"net/http"
 
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/util"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/util"
 )
 
 // Middleware ... ロガー

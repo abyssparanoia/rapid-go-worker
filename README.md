@@ -1,6 +1,6 @@
 ## what is this
 
-- rapid-go-woker for running on container
+- rapid-go-worker for running on container
 - using cloud build for CI/CD
 
 ## how to develop

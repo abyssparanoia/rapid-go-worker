@@ -3,7 +3,7 @@ package mysql
 import (
 	"context"
 
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/log"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/log"
 )
 
 // Logger ... Gorm用のカスタムロガー

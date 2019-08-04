@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/log"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/log"
 	validator "gopkg.in/go-playground/validator.v9"
 )
 

@@ -1,4 +1,4 @@
-module github.com/abyssparanoia/rapid-go-woker
+module github.com/abyssparanoia/rapid-go-worker
 
 go 1.12
 

@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 
-	"github.com/abyssparanoia/rapid-go-woker/src/repository"
+	"github.com/abyssparanoia/rapid-go-worker/src/repository"
 )
 
 type sample struct {

@@ -3,8 +3,8 @@ package push
 import (
 	"context"
 
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/jsonrpc2"
-	"github.com/abyssparanoia/rapid-go-woker/src/lib/log"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/jsonrpc2"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/log"
 )
 
 type entryParams struct {

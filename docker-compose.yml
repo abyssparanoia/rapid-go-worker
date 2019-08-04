@@ -9,7 +9,7 @@ services:
     depends_on:
       - db
     volumes:
-      - .:/go/src/github.com/abyssparanoia/rapid-go-woker
+      - .:/go/src/github.com/abyssparanoia/rapid-go-worker
     ports:
       - "8081:8081"
   db:
