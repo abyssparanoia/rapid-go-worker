@@ -4,16 +4,27 @@ import (
 	"context"
 
 	pubsub "cloud.google.com/go/pubsub"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/log"
+	"github.com/abyssparanoia/rapid-go-worker/src/lib/util"
 	"google.golang.org/api/option"
 )
 
 type ps struct {
-	subscription *pubsub.Subscription
+	subscription   *pubsub.Subscription
+	writer         log.Writer
+	minOutSeverity log.Severity
 }
 
 func (p *ps) Listen(handle MessageHandler) error {
 
 	ctx := context.Background()
+
+	// ロガーをContextに設定
+	traceID := util.StrUniqueID()
+	logger := log.NewLogger(p.writer, p.minOutSeverity, traceID)
+	ctx = log.SetLogger(ctx, logger)
+
+	log.Debugf(ctx, "start subscription")
 
 	err := p.subscription.Receive(ctx, handle)
 
@@ -25,7 +36,7 @@ func (p *ps) Listen(handle MessageHandler) error {
 }
 
 // NewSubscription ... get subscriprio
-func NewSubscription(projectID string, credentialsPath string, subscriptionID string) Subscription {
+func NewSubscription(projectID string, credentialsPath string, subscriptionID string, writer log.Writer, minOutSeverity log.Severity) Subscription {
 	ctx := context.Background()
 	opt := option.WithCredentialsFile(credentialsPath)
 	psClient, err := pubsub.NewClient(ctx, projectID, opt)

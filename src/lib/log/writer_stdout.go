@@ -2,26 +2,11 @@ package log
 
 import (
 	"fmt"
-	"net/http"
 	"time"
 )
 
 type writerStdout struct {
 	TimeFormat string
-}
-
-func (w *writerStdout) Request(
-	severity Severity,
-	traceID string,
-	applicationLogs []*EntryChild,
-	r *http.Request,
-	status int,
-	at time.Time,
-	dr time.Duration) {
-	u := *r.URL
-	u.Fragment = ""
-	date := at.Format(w.TimeFormat)
-	fmt.Printf("%s \"%s %s\" %d %dms\n", date, r.Method, u.RequestURI(), status, dr/1000000)
 }
 
 func (w *writerStdout) Application(

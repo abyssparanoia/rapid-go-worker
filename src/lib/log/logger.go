@@ -3,7 +3,6 @@ package log
 import (
 	"context"
 	"fmt"
-	"net/http"
 	"runtime"
 	"strings"
 	"time"
@@ -42,18 +41,6 @@ func (l *Logger) AddApplicationLog(severity Severity, file string, line int64, f
 		Time:     Time(at),
 	}
 	l.ApplicationLogs = append(l.ApplicationLogs, src)
-}
-
-// WriteRequest ... リクエストログを出力する
-func (l *Logger) WriteRequest(r *http.Request, at time.Time, dr time.Duration) {
-	l.Writer.Request(
-		l.MaxOuttedSeverity,
-		l.TraceID,
-		l.ApplicationLogs,
-		r,
-		l.ResponseStatus,
-		at,
-		dr)
 }
 
 // NewLogger ... Loggerを作成する
